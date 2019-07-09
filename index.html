@@ -55,6 +55,8 @@
 
 	<div id="greeting" >greetings</div>
 
+	<button id="progButtonNode" type="button"></button>
+
 	
 	<!-- load Dojo -->
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true"></script>
@@ -84,6 +86,14 @@
 		    greeting.innerHTML += ' from Dojo!';
 
 		    
+		    var myButton = new Button({
+		        label: "Camera!",
+		        onClick: function(){
+		            // Do something:
+		            // dom.byId("result1").innerHTML += "Thank you! ";
+		            dom.byId("#file-input").click();
+		        }
+		    }, "progButtonNode").startup();
 
 		});
 
