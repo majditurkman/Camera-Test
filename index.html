@@ -110,6 +110,19 @@
 
     <script>
     	
+    	<script>
+  var input = document.querySelector('input[type=file]'); // see Example 4
+  input.onchange = function () {
+    var file = input.files[0];
+    //upload(file);
+    alert(file.length);   // see Example 6
+    //displayAsImage(file); // see Example 7
+  };
+
+    </script>
+
+    <script>
+    	
     	require([
 		    'dojo/dom',
 		    "dojo/_base/lang",
@@ -119,15 +132,7 @@
 		    var greeting = dom.byId('greeting');
 		    greeting.innerHTML += ' from Dojo!';
 
-		    // var input = document.querySelector('input[type=file]'); // see Example 4
-			  on(dom.byId('fff'), "change", lang.hitch(this, function () {
-			    var file = input.files[0];
-			    
-			    alert(file.length);
-			    //upload(file);
-			    // drawOnCanvas(file);   // see Example 6
-			    //displayAsImage(file); // see Example 7
-			  }));
+		    
 
 		});
 
