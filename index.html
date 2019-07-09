@@ -9,62 +9,58 @@
 
 	@media only screen and (max-width: 768px) {
     
-		/*[type="file"] {
-		  height: 0;
-		  overflow: hidden;
-		  width: 0;
+		.custom-file-input::-webkit-file-upload-button {
+		  visibility: hidden;
 		}
-
-		[type="file"] + label {
-		  background: #f15d22;
-		  border: none;
-		  border-radius: 5px;
-		  color: #fff;
-		  cursor: pointer;
+		.custom-file-input::before {
+		  content: 'Select some files';
 		  display: inline-block;
-			font-family: 'Poppins', sans-serif;
-			font-size: inherit;
-		  font-weight: 600;
-		  margin-bottom: 1rem;
+		  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+		  border: 1px solid #999;
+		  border-radius: 3px;
+		  padding: 5px 8px;
 		  outline: none;
-		  padding: 1rem 50px;
-		  position: relative;
-		  transition: all 0.3s;
-		  vertical-align: middle;
-		  width: 90%;
-		  height: 60px;
-		  
-		  
-		}*/
+		  white-space: nowrap;
+		  -webkit-user-select: none;
+		  cursor: pointer;
+		  text-shadow: 1px 1px #fff;
+		  font-weight: 700;
+		  font-size: 10pt;
+		}
+		.custom-file-input:hover::before {
+		  border-color: black;
+		}
+		.custom-file-input:active::before {
+		  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+		}
 
 	}
 	@media only screen and (min-width: 768px) {
 	    
-	    /*[type="file"] {
-		  height: 0;
-		  overflow: hidden;
-		  width: 0;
+	    .custom-file-input::-webkit-file-upload-button {
+		  visibility: hidden;
 		}
-
-		[type="file"] + label {
-		  background: #f15d22;
-		  border: none;
-		  border-radius: 5px;
-		  color: #fff;
-		  cursor: pointer;
+		.custom-file-input::before {
+		  content: 'Select some files';
 		  display: inline-block;
-			font-family: 'Poppins', sans-serif;
-			font-size: inherit;
-		  font-weight: 600;
-		  margin-bottom: 1rem;
+		  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+		  border: 1px solid #999;
+		  border-radius: 3px;
+		  padding: 5px 8px;
 		  outline: none;
-		  padding: 1rem 50px;
-		  position: relative;
-		  transition: all 0.3s;
-		  vertical-align: middle;	  
-		  
-		  
-		}*/
+		  white-space: nowrap;
+		  -webkit-user-select: none;
+		  cursor: pointer;
+		  text-shadow: 1px 1px #fff;
+		  font-weight: 700;
+		  font-size: 10pt;
+		}
+		.custom-file-input:hover::before {
+		  border-color: black;
+		}
+		.custom-file-input:active::before {
+		  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+		}
 	    
 	}
 
@@ -88,7 +84,7 @@
 
 	<br/><br/><br/>
 
-	<input type="file" id="fff" accept="image/*" capture="camera">
+	<input type="file" class="custom-file-input" accept="image/*" capture="camera">
 
 
 
