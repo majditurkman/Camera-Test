@@ -10,7 +10,7 @@
 <style>
 
 
-	/*@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 768px) {
 		#ddd::after{
 			content: '***Mobile***';
 		}
@@ -36,9 +36,12 @@
 			cursor: pointer;
 			padding-top: 10px;
 		}
-	}*/
+	}
 
-	@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+	@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (-webkit-device-pixel-ratio : 3) {
     
 		#ddd::after{
 			content: '***Mobile***';
