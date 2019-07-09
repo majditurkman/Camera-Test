@@ -95,7 +95,7 @@
 
 	<button id="progButtonNode" type="button"></button>
 
-	<div class="myBtn1">Hello</div>
+	<div class="myBtn1" id="button1">Take Photo</div>
 
 	
 	<!-- load Dojo -->
@@ -135,6 +135,11 @@
 		            dom.byId("file-input").click();
 		        }
 		    }, "progButtonNode").startup();
+
+
+		    on(dom.byId("button1"), "click", lang.hitch(this, function(){
+		    	dom.byId("file-input").click();
+		    }));
 
 		});
 
