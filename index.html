@@ -88,7 +88,7 @@
 
 	<br/><br/><br/>
 
-	<input type="file" accept="image/*" capture="camera">
+	<input type="file" dojoAttachPoint="fff" accept="image/*" capture="camera">
 
 
 
@@ -119,8 +119,8 @@
 		    var greeting = dom.byId('greeting');
 		    greeting.innerHTML += ' from Dojo!';
 
-		    var input = document.querySelector('input[type=file]'); // see Example 4
-			  on(input, "change", lang.hitch(this, function () {
+		    // var input = document.querySelector('input[type=file]'); // see Example 4
+			  on(this.fff, "change", lang.hitch(this, function () {
 			    var file = input.files[0];
 			    
 			    alert(file.length);
