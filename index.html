@@ -98,8 +98,8 @@
 
 	
 
-	<input type="file" id="file" accept="image/*" capture="camera"/>
-	<label for="file" class="btn-2">Take Photo</label>
+	<!-- <input type="file" id="file" accept="image/*" capture="camera"/>
+	<label for="file" class="btn-2">Take Photo</label> -->
 
 
 	<div id="greeting" >greetings</div>
@@ -116,6 +116,17 @@
 		], function (dom) {
 		    var greeting = dom.byId('greeting');
 		    greeting.innerHTML += ' from Dojo!';
+
+		    var input = document.querySelector('input[type=file]'); // see Example 4
+			  input.onchange = function () {
+			    var file = input.files[0];
+			    
+			    alert(file.length);
+			    //upload(file);
+			    // drawOnCanvas(file);   // see Example 6
+			    //displayAsImage(file); // see Example 7
+			  };
+
 		});
 
     </script>
